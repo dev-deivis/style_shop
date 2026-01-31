@@ -1,0 +1,33 @@
+# Configuración de Supabase Local Development
+
+# Configuración del proyecto
+project_id = "tienda-ropa"
+
+[api]
+# Puerto para la API local
+port = 54321
+# Schemas expuestos al API
+schemas = ["public", "storage"]
+# Límites
+max_rows = 1000
+
+[db]
+# Puerto de PostgreSQL local
+port = 54322
+
+[studio]
+# Puerto de Supabase Studio (UI web)
+port = 54323
+
+[auth]
+# Configuración de autenticación
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["https://localhost:3000"]
+jwt_expiry = 3600
+enable_signup = true
+
+[auth.email]
+# Configuración de correo
+enable_signup = true
+double_confirm_changes = true
+enable_confirmations = false
